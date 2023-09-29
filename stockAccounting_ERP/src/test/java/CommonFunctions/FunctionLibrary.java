@@ -166,6 +166,7 @@ public class FunctionLibrary {
 			
 		}
 	}
+	//method for Capture Stock
 	public static void capturestock(WebDriver driver, String Locator_Type,String Locator_Value)throws Throwable
 	{
 		String Expected_Num="";
@@ -188,6 +189,7 @@ public class FunctionLibrary {
 		bw.close();
 		
 	}
+	//Method for Stock Table
 	public static void stockTable(WebDriver driver)throws Throwable
 	{
 		FileReader fr = new FileReader("./CaptureData/stocknum.txt");
@@ -204,6 +206,7 @@ public class FunctionLibrary {
 		System.out.println(Exp_stocknumber+"     "+Act_StockNum);
 		Assert.assertEquals(Exp_stocknumber, Act_StockNum, "Stock Number Not Matching");
 	}
+	//Method for Capture supplier
 	public static void captureSupp(WebDriver driver,String Locator_Type,String Locator_Value)throws Throwable
 	{
 		String Expected_Data ="";
@@ -226,6 +229,7 @@ public class FunctionLibrary {
 		bw.close();
 		
 	}
+	//Method for Suppliers Table
 	public static void supplierTable(WebDriver driver)throws Throwable
 	{
 		FileReader fr = new FileReader("./CaptureData/suppliernum.txt");
@@ -242,6 +246,7 @@ public class FunctionLibrary {
 		System.out.println(Exp_suppliernumber+"     "+Act_suppliernumber);
 		Assert.assertEquals(Exp_suppliernumber, Act_suppliernumber, "Supplier number Not Matching");
 	}
+	//Method for Capture Stock
 	public static void captureCusto(WebDriver driver,String Locator_Type,String Locator_Value)throws Throwable
 	{
 		String Expected_Data ="";
@@ -264,6 +269,7 @@ public class FunctionLibrary {
 		bw.close();
 		
 	}
+	//Method for Customer Table
 	public static void custoTable(WebDriver driver)throws Throwable
 	{
 		FileReader fr = new FileReader("./CaptureData/custonum.txt");
@@ -280,8 +286,7 @@ public class FunctionLibrary {
 		System.out.println( Exp_customernumber+"     "+Act_customernumber);
 		Assert.assertEquals( Exp_customernumber, Act_customernumber, "Customer number Not Matching");
 	}
-
-
+     //Method for Generating date
 	public static String generateDate()
 	{
 		Date date = new Date();
